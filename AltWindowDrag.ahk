@@ -20,7 +20,7 @@ if !(WinActive("Cities: Skylines") OR WinActive("Rainbow Six") OR WinActive("Dar
     {
         SetTimer, EWD_WatchMouse, off
         return
-    }
+}
     GetKeyState, EWD_EscapeState, Escape, P
     if EWD_EscapeState = D  ; Escape has been pressed, so drag is cancelled.
     {

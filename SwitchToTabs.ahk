@@ -40,6 +40,12 @@ F15:: ; Switch to VSCode
 		WinActivate, ahk_exe Code.exe
 	Return
 }
+^F15:: ; Ctrl + F15
+{
+	if WinActive("ahk_exe Code.exe")
+		SendInput ^+{tab}
+	Return
+}
 F16:: ; Switch to Last explorer window
 {
 	IfWinNotExist, ahk_class CabinetWClass
@@ -51,7 +57,7 @@ F16:: ; Switch to Last explorer window
 		WinActivate ahk_class CabinetWClass ;you have to use WinActivatebottom if you didn't create a window group.
 	Return
 }
-+F16:: ; Alt + F16 || Close explorer window 
+!F16:: ; Alt + F16 || Close explorer window 
 {
 	if WinActive("ahk_exe explorer.exe")
 		WinClose ahk_class CabinetWClass
