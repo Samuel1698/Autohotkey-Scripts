@@ -24,7 +24,6 @@ F14:: ; Switch to Chrome
 {
 	IfWinNotExist, ahk_exe chrome.exe
 		Run, chrome.exe
-
 	if WinActive("ahk_exe chrome.exe")
 		Sendinput ^{tab}
 	else
@@ -62,11 +61,13 @@ F16:: ; Switch to Last explorer window
 {
 	; Open a second explorer window in the same path
 	if WinActive("ahk_exe explorer.exe") {
-		Send, !d
-		Sleep 50
-		Send, ^c
-		Sleep 100
+		ClipSave := Clipboard
+		Clipboard =
+		SendInput, !d  ; Select file path
+		SendInput, ^c
+		ClipWait       ; Wait for clipboard to contain text
 		Run, explorer.exe "%clipboard%"
+		Clipboard = %ClipSave%
 	}
 	Return
 }
