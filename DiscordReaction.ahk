@@ -47,7 +47,7 @@
 			SendInput, {Backspace}
 			SendInput, % Characters[A_Index] 
 			SendInput, {ShiftDown}{Enter}{ShiftUp} 	; Clicks on Enter without exiting the emote list
-			Sleep, 550
+			Sleep, 850
 		}
 	}
 
@@ -63,7 +63,7 @@
 		SendInput, ^a    			               ; Selects everything before
 		SendInput, %Reaction%
 		SendInput, {ShiftDown}{Enter}{ShiftUp}     ; Clicks on Enter without exiting the emote list
-		Sleep, 600
+		Sleep, 850
 	}
 
 ; -----------------------------------------------------------------------------------------------
@@ -115,7 +115,7 @@
 
 	SingleRegionalIndicator(Char, State){
 		
-		if (Char == "-"){
+		if (Char == " "){
 			if (State == "One") 
 				ReactionEmote("__")
 			if (State == "Two")
@@ -135,7 +135,7 @@
 
 			SendInput, % Char 
 			SendInput, {Shift Down}{Enter}{Shift Up} 	; Clicks on Enter without exiting the emote list
-			Sleep, 600
+			Sleep, 850
 		}
 	}
 
