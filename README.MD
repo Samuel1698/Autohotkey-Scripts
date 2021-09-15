@@ -8,5 +8,7 @@ The script 'DiscordReaction.ahk' allows you to type any phrase in the discord em
 
 Example:
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/43931665/133355447-d680c8a8-9aee-497e-a2d7-5f43d4c01035.gif)
+
 
 Use wisely! 
