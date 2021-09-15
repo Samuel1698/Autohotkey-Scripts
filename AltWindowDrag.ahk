@@ -1,6 +1,6 @@
 SetTitleMatchMode, 2
 #SingleInstance, Force
-Tray_Icon = C:\Users\Samuel\Documents\icons\icons8_drag.ico
+Tray_Icon = %A_ScriptDir%\drag.ico
 IfExist, %Tray_Icon%
 Menu, Tray, Icon, %Tray_Icon%
 

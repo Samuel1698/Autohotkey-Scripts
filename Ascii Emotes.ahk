@@ -3,7 +3,7 @@
 SendMode Input               ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Tray_Icon = C:\Users\Samuel\Documents\icons\icons8_uwu_emoji.ico
+Tray_Icon = %A_ScriptDir%\uwu_emoji.ico
 IfExist, %Tray_Icon%
 Menu, Tray, Icon, %Tray_Icon%
 

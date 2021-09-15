@@ -1,7 +1,9 @@
 ﻿;   INIT
 	#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-	;#NoTrayIcon
+	Tray_Icon = %A_ScriptDir%\test_tube.ico
+	IfExist, %Tray_Icon%
+	Menu, Tray, Icon, %Tray_Icon%
 	#SingleInstance, Force
 	SetTitleMatchMode, 2
 	SetKeyDelay , 100, 100

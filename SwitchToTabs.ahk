@@ -1,7 +1,7 @@
 #SingleInstance, Force
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
-Tray_Icon = C:\Users\Samuel\Documents\icons\icons8_switch.ico
+Tray_Icon = %A_ScriptDir%\switch.ico
 IfExist, %Tray_Icon%
 Menu, Tray, Icon, %Tray_Icon%
 
@@ -70,4 +70,12 @@ F16:: ; Switch to Last explorer window
 		Clipboard = %ClipSave%
 	}
 	Return
+}
+#+C::
+{
+  MouseGetPos, MouseX, MouseY
+  PixelGetColor, color, %MouseX%, %MouseY%, RGB
+  StringLower, color, color
+  clipboard := SubStr(color, 3)
+  Return
 }
