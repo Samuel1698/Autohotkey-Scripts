@@ -54,13 +54,12 @@ F14:: ; Switch to Chrome
 				break ; If the monitor to which the window belongs to has been found, break loop
 			}
 		}
-		if (found=="true")
+		if (found==true)
 		{
 			WinActivate,% "ahk_id " hwnd
 			break
 		}
 	}
-	Return
 }
 F15:: ; Switch to VSCode
 {
