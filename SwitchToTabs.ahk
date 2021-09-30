@@ -23,13 +23,12 @@ F14:: ; Switch to Chrome
 {
 	IfWinNotExist, ahk_exe chrome.exe
 		Run, chrome.exe
-	; Make the mouse coordinates be relative to the screen
-	CoordMode, Mouse, Screen
 	; Loop through list of chrome windows
 	WinGet,List,List, ahk_exe chrome.exe
-	chromeGroup := Array()
 	Loop % List {
 		hwnd:=List%A_Index%
+		; reset variable
+		found=false
 		; Get position of current chrome in list and the mouse
 		WinGetPos, Wx, Wy, w, h,% "ahk_id " hwnd
 		WinGetPos, Ax, Ay, w, h, A
