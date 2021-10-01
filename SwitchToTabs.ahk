@@ -19,8 +19,6 @@ F13:: ; Switch to Firefox
 
 F14:: ; Switch to Chrome
 {
-	IfWinNotExist, ahk_exe chrome.exe
-		Run, chrome.exe
 	; Loop through all the monitors
 	SysGet, MonitorCount, 80
 	Loop %MonitorCount%
