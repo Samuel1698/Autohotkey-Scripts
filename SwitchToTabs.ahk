@@ -10,8 +10,8 @@ if FileExist(TrayIcon)
 ; F13: Switch to Visual Studio Code
 F13:: {
     if !WinExist("ahk_exe Code.exe")
-        Run("Code.exe", "C:\\Program Files\\Microsoft VS Code")
-    if WinActive("ahk_exe Code.exe")
+        Run("C:\Program Files\Microsoft VS Code\Code.exe")
+    else if WinActive("ahk_exe Code.exe")
         SendInput("^{Tab}")           ; Cycle tabs in VSCode
     else
         WinActivate("ahk_exe Code.exe")
